@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Nav from './Nav';
-import Bod from './Bod';
 import registerServiceWorker from './registerServiceWorker';
+import App from './App';
 
-ReactDOM.render(<Nav />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
+
 registerServiceWorker();
