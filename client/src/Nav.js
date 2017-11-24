@@ -18,7 +18,7 @@ class Nav extends Component {
               <a className="nav-link" href="#">Items</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="#">Trades</a>
+              <a className="nav-link" href="#">Trades</a>
             </li>
           </ul>
             <form className="form-inline my-2 my-lg-0">
