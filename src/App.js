@@ -1,6 +1,7 @@
+import { Router, Route, Switch } from 'react-router';
 import React, { Component } from 'react';
-import Nav from './Nav';
-import Bod from './Bod';
+import Nav from './Components/NavBar/Nav';
+import Bod from './Components/Body/Bod';
 
 class App extends Component {
   render(){
