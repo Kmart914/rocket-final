@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const db = require('./models');
-const routes = require('./routes');
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -13,8 +12,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static("client/build"));
+// app.use(bodyParser.json());
 
 // Add routes, both API and view
 // app.use("/", routes);
@@ -37,9 +35,10 @@ mongoose.connection.on('error', function(err) {
 });
 
 app.get("/", (req, res) => {
-  db.User.create({ name: "someName", image_source: "someImage"}).then( () => {
-     console.log("Supbruh");
-  })
+  db.items.create({ name: "someName", image_source: "someImage"})
+            .then( () => {
+                console.log("Supbruh");
+             })
 })
 
 // Send every request to the React app
