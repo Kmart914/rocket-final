@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const db = require('./models');
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -32,6 +33,12 @@ mongoose.connect(
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
+app.get("/", (req, res) => {
+   db.User.create({}). then( () => {
+      
+   })
+}
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
