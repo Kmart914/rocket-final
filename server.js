@@ -35,9 +35,10 @@ mongoose.connection.on('error', function(err) {
 });
 
 app.get("/", (req, res) => {
-  db.items.create({ name: "someName", image_source: "someImage"})
+  db.Item.create({ name: "someName", image_source: "someImage"})
             .then( () => {
                 console.log("Supbruh");
+                res.send('done');
              })
 })
 

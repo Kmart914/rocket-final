@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class testfrontend extends Component {
+class Testfrontend extends Component {
   render(){
       return (
         <form action="">
@@ -11,4 +11,4 @@ class testfrontend extends Component {
   }
 }
 
-export default testfrontend;
+export default Testfrontend;

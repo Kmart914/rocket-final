@@ -9,6 +9,7 @@ class App extends Component {
       <div>
         <Nav />
         <Bod />
+        <Testfrontend />
       </div>
     );
   }
