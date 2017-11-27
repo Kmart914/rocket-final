@@ -22,7 +22,7 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/27017",
+  process.env.MONGODB_URI || "mongodb://localhost/rlitems",
   {
     useMongoClient: true
   }
@@ -35,8 +35,8 @@ app.get("*", function(req, res) {
 });
 
 app.get("/", (req, res) => {
-   db.User.create({}). then( () => {
-      
+   db.User.create({ name: "someName", image_source: "someImage"}). then( () => {
+      console.log("Supbruh");
    })
 }
 
