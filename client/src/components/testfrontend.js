@@ -4,8 +4,8 @@ class testfrontend extends Component {
   render(){
       return (
         <form action="">
-          Query: <input type="text">
-          <input type="submit">
+          Query: <input type="text"></input>
+          <input type="submit"></input>
         </form>
       )
   }
