@@ -6,4 +6,6 @@ const itemSchema = new Schema({
     image_source: { type: String, required: true }
 })
 
-const item = mongoose.model("item", itemSchema);
+const items = mongoose.model("items", itemSchema);
+
+module.exports = items;
