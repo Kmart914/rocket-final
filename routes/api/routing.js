@@ -7,7 +7,7 @@ router.route("/api/info")
       .get(/*Some function*/);
 
 router.route("/api/items")
-      .get(/*some function*/);
+      .get(itemsController.listAll());
 
 router.route("/api/wish")
       .get(/*some function*/)
