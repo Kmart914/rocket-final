@@ -31,10 +31,10 @@ mongoose.connection.on('connected', function(){
 });
 
 mongoose.connection.on('error', function(err) {
-   conosle.log('error: ', err);
+   console.log('error: ', err);
 });
 
-app.get("/", (req, res) => {
+app.get("/dbstuff", (req, res) => {
   db.Item.create({ name: "someName", image_source: "someImage"})
             .then( () => {
                 console.log("Supbruh");
