@@ -34,25 +34,19 @@ mongoose.connection.on('error', function(err) {
    console.log('error: ', err);
 });
 
-app.get("/dbstuff", (req, res) => {
+app.get("/", (req, res) => {
   db.Item.create({ name: "someName", image_source: "someImage"})
             .then( () => {
                 console.log("Supbruh");
                 res.send('done');
-             })
-})
+             });
+});
 
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
-// app.get("/dbstuff", (req, res) => {
-//    db.User.create({ name: "someName", image_source: "someImage"}).then( () => {
-//       console.log("Supbruh");
-//    })
-// }
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
